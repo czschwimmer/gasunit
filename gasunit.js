@@ -10,6 +10,20 @@ function assertFalse(expression){
   }
 }
 
+function assertCellContentEqual(sheet, A1Notation, expectedValue){
+    var actualValue = sheet.getRange(A1Notation).getValue();
+    if(actualValue != expectedValue){
+        throw("Expected : " + expectedValue + " / Actual : "+ actualValue);
+    }
+}
+
+function assertCellColorEqual(sheet, A1Notation, expectedColor){
+    var actualColor = sheet.getRange(A1Notation).getBackgroundColor();
+    if(actualColor != expectedColor){
+        throw("Expected : " + expectedColor + " / Actual : "+ actualColor);
+    }
+}
+
 var GASUnit = {
   runTest : function(testClass){
     var outPut = new GASUnit.Output();
