@@ -1,3 +1,15 @@
+function assertTrue(expression){
+  if(true != expression){
+    throw("Not true");
+  }
+}
+
+function assertFalse(expression){
+  if(false != expression){
+    throw("Not false");
+  }
+}
+
 var GSUnit = {
   runTest : function(testClass){
     var outPut = new GSUnit.Output();
@@ -90,15 +102,3 @@ GSUnit.Output = function(){
   }
     
 };
-    
-function assertTrue(expression){
-  if(true != expression){
-    throw("Not true");
-  }
-}
-
-function assertFalse(expression){
-  if(false != expression){
-    throw("Not false");
-  }
-}
