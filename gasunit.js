@@ -89,7 +89,7 @@ GSUnit.Output = function(){
     return range;
   }
     
-}
+};
     
 function assertTrue(expression){
   if(true != expression){
