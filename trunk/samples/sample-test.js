@@ -13,5 +13,5 @@ var userTest = {
 };
 
 function main(){  
-  GSUnit.runTest(userTest);
+  GASUnit.runTest(userTest);
 }

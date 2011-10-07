@@ -10,9 +10,9 @@ function assertFalse(expression){
   }
 }
 
-var GSUnit = {
+var GASUnit = {
   runTest : function(testClass){
-    var outPut = new GSUnit.Output();
+    var outPut = new GASUnit.Output();
     outPut.initOutPut();
     var numberOfTests = 0;
     for(var methode in testClass){
@@ -33,8 +33,8 @@ var GSUnit = {
   }
 };
 
-GSUnit.Output = function(){
-  var sheetName = "GSUnit";
+GASUnit.Output = function(){
+  var sheetName = "GASUnit";
   var sheet = null;
   var nbTests = 0;
   var nbSuccessTests = 0;
