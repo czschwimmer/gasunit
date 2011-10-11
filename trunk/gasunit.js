@@ -10,6 +10,18 @@ function assertFalse(expression){
   }
 }
 
+function assertEqual(expectedValue,actualValue){
+  if(actualValue != expectedValue){
+        throw("Expected : " + expectedValue + " / Actual : "+ actualValue);
+    }
+}
+
+function assertExactlyEqual(expectedValue,actualValue){
+  if(actualValue === expectedValue){
+        throw("Expected : " + expectedValue + " / Actual : "+ actualValue);
+    }
+}
+
 function assertCellContentEqual(sheet, A1Notation, expectedValue){
     var actualValue = sheet.getRange(A1Notation).getValue();
     if(actualValue != expectedValue){
